@@ -1,0 +1,7 @@
+.mainImageContainer {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/public/images/main_image.webp');
+    background-size: cover;
+    background-position: center center;
+}
