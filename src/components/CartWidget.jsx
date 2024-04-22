@@ -1,14 +1,16 @@
-import '../style/Cart.css'
+//* STYLE: _cartWidget.scss
 
 export const CartWidget = () => {
     return (
-        <div className="cartContainer">
-            <svg className="cartIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-			    <path className="cartPath" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
-			</svg>
-            <div className="cartCountContainer">
-                <span className="cartCount">9</span>
-            </div>
+        <div className="cartWidgetContainer">
+            <a className="cartWidgetContainer-link" href="#">
+                <div className="cartWidgetContainer-link-quantityContainer">
+                    <span className="cartWidgetContainer-link-quantityContainer-number">10</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="cartWidgetContainer-link-svg bi bi-cart2" viewBox="0 0 16 16">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                </svg>
+            </a>
         </div>
     )
 }
