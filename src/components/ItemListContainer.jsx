@@ -1,7 +1,13 @@
-/* export const ItemListContainer = ({first, second}) => {
+//* STYLE: _itemListContainer.scss
+
+export const ItemListContainer = ({first, second}) => {
     return (
-        <div className="itemListContainer">
-            <h1 className="eslogan">{first}<span className="highlighted">{second}</span></h1> 
-        </div>
+        <section>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
     )
-} */
+}

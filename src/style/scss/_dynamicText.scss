@@ -13,10 +13,14 @@
         @include pad (0 40px);
         line-height: 65px;
         overflow: hidden;
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
 
         &-text {
             @include display (in);
-            @include texts (65px, 600, rgb(82, 138, 201));
+            @include texts (65px, 800, rgb(82, 138, 201));
             float: left;
         }
 
@@ -41,7 +45,7 @@
 }
 }
 
-@keyframes change {
+@keyframes change { //* STANDARD
     0%, 12.66%, 100% {transform:translate3d(0, 38%,0) ;}
     16.66%, 29.32% {transform:translate3d(0, 12%,0);}
     33.32%,45.98% {transform:translate3d(0,-12%,0);}
@@ -50,49 +54,49 @@
     83.3%,95.96% {transform:translate3d(0,12%,0);}
 }
 
-@-webkit-keyframes change {
+@-webkit-keyframes change { //* SAFARI
     0%, 12.66%, 100% {transform:translate3d(0, 38%,0) ;}
     16.66%, 29.32% {transform:translate3d(0, 12%,0);}
-    33.32%,45.98% {transform:translate3d(0,-14%,0);}
+    33.32%,45.98% {transform:translate3d(0,-12%,0);}
     49.98%,62.64% {transform:translate3d(0,-38%,0);}
-    66.64%,79.3% {transform:translate3d(0,-14%,0);}
+    66.64%,79.3% {transform:translate3d(0,-12%,0);}
     83.3%,95.96% {transform:translate3d(0,12%,0);}
 }
 
-@-o-keyframes change {
+@-o-keyframes change { //* OPERA
     0%, 12.66%, 100% {transform:translate3d(0, 38%,0) ;}
     16.66%, 29.32% {transform:translate3d(0, 12%,0);}
-    33.32%,45.98% {transform:translate3d(0,-14%,0);}
+    33.32%,45.98% {transform:translate3d(0,-12%,0);}
     49.98%,62.64% {transform:translate3d(0,-38%,0);}
-    66.64%,79.3% {transform:translate3d(0,-14%,0);}
+    66.64%,79.3% {transform:translate3d(0,-12%,0);}
     83.3%,95.96% {transform:translate3d(0,12%,0);}
 }
 
-@-moz-keyframes change {
+@-moz-keyframes change { //* FIREFOX
     0%, 12.66%, 100% {transform:translate3d(0, 38%,0) ;}
     16.66%, 29.32% {transform:translate3d(0, 12%,0);}
-    33.32%,45.98% {transform:translate3d(0,-14%,0);}
+    33.32%,45.98% {transform:translate3d(0,-12%,0);}
     49.98%,62.64% {transform:translate3d(0,-38%,0);}
-    66.64%,79.3% {transform:translate3d(0,-14%,0);}
+    66.64%,79.3% {transform:translate3d(0,-12%,0);}
     83.3%,95.96% {transform:translate3d(0,12%,0);}
 }
 
-@keyframes opacity {
+@keyframes opacity { //* STANDARD
     0%, 100% {opacity:0;}
     50% {opacity:1;}
 }
 
-@-webkit-keyframes opacity {
+@-webkit-keyframes opacity { //* SAFARI
 0%, 100% {opacity:0;}
 50% {opacity:1;}
 }
 
-@-o-keyframes opacity {
+@-o-keyframes opacity { //* OPERA
 0%, 100% {opacity:0;}
 50% {opacity:1;}
 }
 
-@-moz-keyframes opacity {
+@-moz-keyframes opacity { //* FIREFOX
 0%, 100% {opacity:0;}
 50% {opacity:1;}
 }

@@ -1,0 +1,46 @@
+.searchBarContainer {
+    @include display (flex);
+    @include flex (row);
+    @include mar (0 40px 0 0);
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 20px;
+    &:focus-within{
+        @include mar (0 38px 0 0);
+        border: 2px solid rgb(82, 138, 201);
+        .searchBarContainer-searchIcon-svg {
+            fill: rgb(82, 138, 201);
+        }
+        .searchBarContainer-deleteIcon {
+            display: flex
+        }
+    }
+
+    &-searchIcon {
+        @include display (flex);
+        @include justali (center, center);
+        @include pad (5px 10px 5px 8px);
+        &-svg {
+            @include widhei (20px, 20px);
+            fill: rgb(100, 100, 100);
+        }
+    }
+    &-searchBar {
+        @include wid(270px);
+        border: none;
+        border-radius: 0 20px 20px 0;
+        &:focus {
+            @include wid (235px);
+            outline: none
+        }
+    }
+    &-deleteIcon {
+        @include display (no);
+        @include justali (center, center);
+        @include pad (5px 8px 5px 10px);
+        cursor: pointer;
+        &-svg {
+            @include widhei (17px, 17px);
+            fill: rgb(189, 71, 71);
+        }
+    }
+}

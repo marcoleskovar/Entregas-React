@@ -1,0 +1,46 @@
+.navigation{
+    &-itemList{
+        @include display (flex);
+        @include marpad (0, 0);
+        @include list (none, none);
+        &-item{
+            @include mar (0 30px);
+            cursor: pointer;
+            &-link{
+                color: rgb(77, 77, 77);
+                text-decoration: none;
+                &-svg {
+                    @include mar (0 0 0 7px);
+                    @include widhei (11px, auto);
+                    fill: currentColor
+                }
+            }
+            &-productList {
+                //@include display (no);
+                @include list (none, none);
+                @include wid (130px);
+                @include pad (0);
+                background-color: rgb(216, 216, 216);
+                position: absolute;
+                z-index: 10000000;
+                &-item {
+                    text-decoration: none;
+                    a {
+                        @include display (blo);
+                        @include widhei (100%, auto);
+                        @include pad (7px 10px);
+                        text-decoration: none;
+                        color: rgb(77, 77, 77);
+                        &:hover {
+                            background-color: rgb(192, 192, 192);
+                            color: rgb(82, 138, 201);
+                        }
+                    }
+                }
+            }
+            &:hover .navigation-itemList-item-link {
+                color: rgb(82, 138, 201);
+            }
+        }
+    }
+}

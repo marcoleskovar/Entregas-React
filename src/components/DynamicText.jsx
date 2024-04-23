@@ -2,15 +2,15 @@
 
 export const DynamicText = () => {
     return (
-        <section class="dynamicTextContainer">
-            <div class="dynamicTextContainer-content">
-                <ul class="dynamicTextContainer-content-list">
-                    <li class="dynamicTextContainer-content-list-item">¿ Tornillos ?</li>
-                    <li class="dynamicTextContainer-content-list-item">¿  Tarugos  ?</li>
-                    <li class="dynamicTextContainer-content-list-item">¿  Bulones  ?</li>
-                    <li class="dynamicTextContainer-content-list-item">¿ Arandelas ?</li>
+        <section className="dynamicTextContainer">
+            <div className="dynamicTextContainer-content">
+                <ul className="dynamicTextContainer-content-list">
+                    <li className="dynamicTextContainer-content-list-item">¿ Tornillos ?</li>
+                    <li className="dynamicTextContainer-content-list-item">¿  Tarugos  ?</li>
+                    <li className="dynamicTextContainer-content-list-item">¿  Bulones  ?</li>
+                    <li className="dynamicTextContainer-content-list-item">¿ Tuercas ?</li>
                 </ul>
-                <p class="dynamicTextContainer-content-text">GAMMA</p>
+                <h1 className="dynamicTextContainer-content-text">GAMMA</h1>
             </div>
         </section>
     )
