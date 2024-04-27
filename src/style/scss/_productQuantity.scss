@@ -1,0 +1,19 @@
+.productQuantity {
+    &-btn {
+        @include marpad (5px, 1px 7px);
+        @include texts (25px, 400, rgb(82, 138, 201));
+        background-color: transparent;
+        border: 0px
+    }
+    &-input {
+        @include widhei (100px, auto);
+        text-align: center;
+        border: 2px solid rgb(82, 138, 201);
+        border-radius: 10px;
+        outline: none;
+        cursor: default;
+        &::-webkit-inner-spin-button, .productQuantity-input::-webkit-outer-spin-button{
+            -webkit-appearance: none;
+        }
+    }
+}

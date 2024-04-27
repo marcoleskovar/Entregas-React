@@ -16,7 +16,7 @@
                 }
             }
             &-productList {
-                //@include display (no);
+                @include display (no);
                 @include list (none, none);
                 @include wid (130px);
                 @include pad (0);
@@ -37,6 +37,9 @@
                         }
                     }
                 }
+            }
+            .active {
+                @include display (blo);    
             }
             &:hover .navigation-itemList-item-link {
                 color: rgb(82, 138, 201);

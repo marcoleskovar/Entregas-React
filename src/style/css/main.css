@@ -28,6 +28,7 @@
   fill: currentColor;
 }
 .navigation-itemList-item-productList {
+  display: none;
   list-style: none;
   text-decoration: none;
   width: 130px;
@@ -50,6 +51,9 @@
 .navigation-itemList-item-productList-item a:hover {
   background-color: rgb(192, 192, 192);
   color: rgb(82, 138, 201);
+}
+.navigation-itemList-item .active {
+  display: block;
 }
 .navigation-itemList-item:hover .navigation-itemList-item-link {
   color: rgb(82, 138, 201);
@@ -326,4 +330,54 @@
   50% {
     opacity: 1;
   }
+}
+.addToCartBtnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.addToCartBtnContainer-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 4px 7px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(241, 241, 241);
+  background-color: rgb(71, 177, 103);
+  border: 0px;
+  border-radius: 15px;
+}
+.addToCartBtnContainer-btn:hover {
+  background-color: rgb(63, 155, 91);
+}
+.addToCartBtnContainer-svg {
+  margin: 0 2px 2px 8px;
+  width: 22px;
+  height: auto;
+  fill: rgb(241, 241, 241);
+}
+
+.productQuantity-btn {
+  margin: 5px;
+  padding: 1px 7px;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(82, 138, 201);
+  background-color: transparent;
+  border: 0px;
+}
+.productQuantity-input {
+  width: 100px;
+  height: auto;
+  text-align: center;
+  border: 2px solid rgb(82, 138, 201);
+  border-radius: 10px;
+  outline: none;
+  cursor: default;
+}
+.productQuantity-input::-webkit-inner-spin-button, .productQuantity-input .productQuantity-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
