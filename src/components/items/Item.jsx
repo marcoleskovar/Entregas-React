@@ -15,7 +15,7 @@ export const Item = ({productInfo}) => {
     }, [])
 
     return (
-        <div className="itemCard" style={{display: visible ? 'block' : 'none'}}> //TODO: SACARLE EL STYLE JUNTO CON EL TIMEOUT
+        <div className="itemCard" style={{display: visible ? 'block' : 'none'}}> {/* //TODO: SACARLE EL STYLE JUNTO CON EL TIMEOUT */}
             <a href="#" className="itemCard-link">
                 <div className="itemCard-link-containers top">
                     <div className="itemCard-link-containers-imageContainer">
