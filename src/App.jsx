@@ -1,8 +1,7 @@
 import { Navbar } from './components/navbar/Navbar'
-import { DynamicText } from './components/DynamicText'
-import { AddToCartBtn } from './components/cart/AddToCartBtn'
-//import { ItemListContainer } from './components/ItemListContainer'
-//import { MainImage } from './components/MainImage'
+import { DynamicText } from './components/landing/DynamicText'
+import { ProductQuantity } from './components/cart/ProductQuantity'
+import { ItemListContainer } from './components/items/ItemListContainer'
 import './style/css/main.css'
 
 function App () {
@@ -10,7 +9,8 @@ function App () {
     <div>
       <Navbar />
       <DynamicText />
-      <AddToCartBtn />
+      <ItemListContainer />
+      <ProductQuantity stock={7} initial={1}/>
     </div>
   )
 }

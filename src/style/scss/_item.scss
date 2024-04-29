@@ -1,0 +1,57 @@
+.itemCard {
+    @include widhei (300px, 350px);
+    @include mar (10px 5px);
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    &-link{
+        @include widhei (100%, 100%);
+        @include display (flex);
+        @include justali (center, center);
+        @include flex (col);
+        border-radius: 7px;
+        text-decoration: none;
+        &-containers {
+            @include display (flex);
+            @include justali (end, center);
+            @include widhei (100%, 100%);
+            @include flex (col);
+            &-imageContainer {
+                @include display (flex);
+                @include justali (center, center);
+                @include widhei (100%, auto);
+                &-image {
+                    @include widhei (219px, auto);
+                }
+            }
+            &-alertContainer {
+                @include widhei (100%, auto);
+                text-align: start;
+                p {
+                    @include mar (0 8px);
+                    @include texts (13px, 500, rgb(226, 121, 0));
+                }
+            }
+            &-infoContainer {
+                @include widhei (100%, auto);
+                @include display (flex);
+                @include justali (center, start);
+                @include flex (col);
+                &-info {
+                    @include mar (8px 8px 6px 8px);
+                    &-title {
+                        @include texts (17px, 400, rgb(34, 34, 34));
+                    }
+                    &-description {
+                        @include texts (13px, 300, rgb(99, 99, 99))
+                    }
+                    &-price {
+                        @include texts (17px, 500, rgb(34, 34, 34))
+                    }
+                    p {
+                        @include mar (0)
+                    }
+                }
+            }
+        }
+    }
+}

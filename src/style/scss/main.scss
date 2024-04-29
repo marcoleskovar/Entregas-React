@@ -4,7 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lexend Deca', Arial, sans-serif
+    font-family: 'Lexend Deca', Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(247, 247, 247)
 }
 
 @import '_mixins';
@@ -13,5 +17,8 @@
 @import '_searchBar';
 @import '_navbar';
 @import '_dynamicText';
+@import '_itemListContainer';
+@import '_itemList';
+@import '_item';
 @import '_addToCartBtn';
 @import '_productQuantity';

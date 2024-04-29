@@ -5,9 +5,12 @@
     &-mainContainer{
         @include display (flex);
         @include position (relative, 0, 0);
-        @include justali (space-between, center);
+        @include justali (center, center);
         @include wid (100vw);
         &-logoContainer{
+            @include display (flex);
+            @include justali (start, center);
+            @include wid (100%);
             @include pad (5px 0 0 0);
             &-link{
                 &-logoImage{
@@ -17,6 +20,8 @@
         }
         &-searchAndCart {
             @include display (flex);
+            @include justali (end, center);
+            @include wid (100%);
         }
     }
 }

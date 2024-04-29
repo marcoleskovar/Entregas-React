@@ -7,11 +7,11 @@
         @include justali (center, center);
         @include marpad (10px, 4px 7px);
         @include texts (14px, 400, rgb(241, 241, 241));
-        background-color: rgb(71, 177, 103);
+        background-color: rgb(82, 138, 201);
         border: 0px;
         border-radius: 15px;
         &:hover {
-            background-color: rgb(63, 155, 91);
+            background-color: rgb(77, 126, 182);
         }
     }
     &-svg {
