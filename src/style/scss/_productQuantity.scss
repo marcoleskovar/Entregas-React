@@ -2,10 +2,19 @@
     @include display (flex);
     @include justali (center, center);
     @include flex (col);
+    &-stock {
+        p {
+            @include mar (0);
+            @include texts (15px, 300, rgb(82, 138, 201))
+        }
+        .noStock {
+            color: rgb(172, 72, 72)
+        }
+    }
     &-controls {
         &-btn {
-            @include marpad (5px, 1px 7px);
-            @include texts (25px, 400, rgb(82, 138, 201));
+            @include marpad (0 5px 5px 5px, 1px 7px);
+            @include texts (20px, 400, rgb(82, 138, 201));
             background-color: transparent;
             border: 0px
         }

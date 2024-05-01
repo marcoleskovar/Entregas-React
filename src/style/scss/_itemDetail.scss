@@ -1,0 +1,105 @@
+.itemDetailContainer {
+    @include widhei (100%, 100%);
+    @include display (grid);
+    @include pad (30px);
+    &-mainSection {
+        @include widhei (auto, 100%);
+        @include display (grid);
+        grid-template-columns: repeat(11, 1fr);
+        &-images {
+            @include display (flex);
+            @include justali (start, start);
+            grid-column: 1/6;
+            &-side {
+                @include widhei (25%, 100%);
+                @include display (flex);
+                @include justali (center, start);
+                &-list {
+                    @include widhei (100%, 100%);
+                    @include display (grid);
+                    @include marpad (0 5px 0 0, 0);
+                    list-style-type: none;
+                    grid-template-rows: repeat(4, 1fr);
+                    &-image {
+                        @include widhei (auto, 100%);
+                        @include display (flex);
+                        @include justali (start, center);
+                        @include pad (0 0 10px 0);
+                        img {
+                            @include widhei (100%, 100%);
+                            object-fit: contain;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            &-main {
+                @include widhei (auto, 100%);
+                @include display (flex);
+                @include justali (start, center);
+                @include pad (0 0 0 10px);
+                overflow: hidden;
+                img {
+                    @include widhei (100%, auto);
+                    object-fit: cover;
+                }
+            }
+        }
+        &-selection {
+            @include display (flex);
+            @include justali (start, center);
+            @include flex (col);
+            @include pad (50px 30px);
+            grid-column: 7/12;
+            &-productName {
+                @include widhei (100%, auto);
+                text-align: center;
+                &-name {
+                    @include mar (0);
+                    color: rgb(32, 32, 32);
+                }
+            }
+            &-details {
+                @include widhei (60%,auto);
+                @include mar (20px 0);
+                border: 1px solid rgb(231, 112, 0);
+                border-radius: 10px;
+                &-opts {
+                    @include mar (10px 3px);
+                    span {
+                        @include texts (17px, 300, rgb(68, 68, 68));
+                        @include marpad (5px, 2px);
+                    }
+                    select {
+                        border: 1px solid rgb(167, 167, 167);
+                        border-radius: 10px;
+                        min-width: 150px;
+                        max-width: 150px;
+                        option:checked {
+                            background-color: rgb(207, 207, 207);
+                        }
+                        &:focus {
+                            outline: none;
+                            border: 2px solid rgb(82, 138, 201);
+                            border-radius: 10px;
+                        }
+                        &:not(:-internal-select-author-button) {
+                            background-color: transparent
+                        }
+                    }
+                }
+                &-confirm {
+                    @include mar (50px 0 0 0)
+                }
+            }
+        }
+    }
+    &-descriptionSection {
+        @include display (grid);
+        grid-template-columns: repeat(11, 1fr);
+        &-desc {
+            color: rgb(87, 87, 87);
+            grid-column: 1/7;
+        }
+    }
+}

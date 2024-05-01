@@ -27,7 +27,7 @@
     &-searchBar {
         @include wid(270px);
         @include texts (15px, 300, inherit);
-        background-color: rgb(247, 247, 247);
+        background-color: transparent;
         border: none;
         border-radius: 0 20px 20px 0;
         &:focus {

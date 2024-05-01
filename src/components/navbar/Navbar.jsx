@@ -3,15 +3,16 @@
 import { CartWidget } from "./CartWidget"
 import { SearchBar } from "./SearchBar"
 import { Navegation } from "./Navegation"
+import { Link } from "react-router-dom"
 
 export const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-mainContainer">
                 <div className="navbar-mainContainer-logoContainer">
-                    <a className="navbar-mainContainer-logoContainer-link" href="#">
+                    <Link to={"/"} className="navbar-mainContainer-logoContainer-link">
                         <img className="navbar-mainContainer-logoContainer-link-logoImage" src="/images/full_logo.webp" alt="logo navbar" />
-                    </a>
+                    </Link>
                 </div>
                 <Navegation />
                 <div className="navbar-mainContainer-searchAndCart">

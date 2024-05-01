@@ -2,6 +2,9 @@
     @include display (flex);
     @include justali (center, center);
     @include pad (10px 45px);
+    @include position (sticky, 0, 0);
+    background-color: transparent;
+    backdrop-filter: blur(15px);
     &-mainContainer{
         @include display (flex);
         @include position (relative, 0, 0);

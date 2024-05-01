@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Lexend Deca", Arial, sans-serif;
+  /*     overflow-x: hidden; */
 }
 
 body {
@@ -22,6 +23,7 @@ body {
   padding: 0;
   list-style: none;
   text-decoration: none;
+  z-index: 10000000;
 }
 .navigation-itemList-item {
   margin: 0 30px;
@@ -140,7 +142,7 @@ body {
   font-size: 15px;
   font-weight: 300;
   color: inherit;
-  background-color: rgb(247, 247, 247);
+  background-color: transparent;
   border: none;
   border-radius: 0 20px 20px 0;
 }
@@ -164,6 +166,11 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px 45px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  backdrop-filter: blur(15px);
 }
 .navbar-mainContainer {
   display: flex;
@@ -216,6 +223,7 @@ body {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
+  z-index: -1;
 }
 .dynamicTextContainer-content-text {
   display: inline;
@@ -449,6 +457,131 @@ body {
   margin: 0;
 }
 
+.itemDetailContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  padding: 30px;
+}
+.itemDetailContainer-mainSection {
+  width: auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+}
+.itemDetailContainer-mainSection-images {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  grid-column: 1/6;
+}
+.itemDetailContainer-mainSection-images-side {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.itemDetailContainer-mainSection-images-side-list {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  margin: 0 5px 0 0;
+  padding: 0;
+  list-style-type: none;
+  grid-template-rows: repeat(4, 1fr);
+}
+.itemDetailContainer-mainSection-images-side-list-image {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 0 10px 0;
+}
+.itemDetailContainer-mainSection-images-side-list-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+.itemDetailContainer-mainSection-images-main {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 0 0 10px;
+  overflow: hidden;
+}
+.itemDetailContainer-mainSection-images-main img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.itemDetailContainer-mainSection-selection {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 30px;
+  grid-column: 7/12;
+}
+.itemDetailContainer-mainSection-selection-productName {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.itemDetailContainer-mainSection-selection-productName-name {
+  margin: 0;
+  color: rgb(32, 32, 32);
+}
+.itemDetailContainer-mainSection-selection-details {
+  width: 60%;
+  height: auto;
+  margin: 20px 0;
+  border: 1px solid rgb(231, 112, 0);
+  border-radius: 10px;
+}
+.itemDetailContainer-mainSection-selection-details-opts {
+  margin: 10px 3px;
+}
+.itemDetailContainer-mainSection-selection-details-opts span {
+  font-size: 17px;
+  font-weight: 300;
+  color: rgb(68, 68, 68);
+  margin: 5px;
+  padding: 2px;
+}
+.itemDetailContainer-mainSection-selection-details-opts select {
+  border: 1px solid rgb(167, 167, 167);
+  border-radius: 10px;
+  min-width: 150px;
+  max-width: 150px;
+}
+.itemDetailContainer-mainSection-selection-details-opts select option:checked {
+  background-color: rgb(207, 207, 207);
+}
+.itemDetailContainer-mainSection-selection-details-opts select:focus {
+  outline: none;
+  border: 2px solid rgb(82, 138, 201);
+  border-radius: 10px;
+}
+.itemDetailContainer-mainSection-selection-details-opts select:not(:-internal-select-author-button) {
+  background-color: transparent;
+}
+.itemDetailContainer-mainSection-selection-details-confirm {
+  margin: 50px 0 0 0;
+}
+.itemDetailContainer-descriptionSection {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+}
+.itemDetailContainer-descriptionSection-desc {
+  color: rgb(87, 87, 87);
+  grid-column: 1/7;
+}
+
 .addToCartBtnContainer {
   display: flex;
   justify-content: center;
@@ -484,10 +617,19 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.selectQuantity-stock p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgb(82, 138, 201);
+}
+.selectQuantity-stock .noStock {
+  color: rgb(172, 72, 72);
+}
 .selectQuantity-controls-btn {
-  margin: 5px;
+  margin: 0 5px 5px 5px;
   padding: 1px 7px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 400;
   color: rgb(82, 138, 201);
   background-color: transparent;

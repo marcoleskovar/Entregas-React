@@ -5,7 +5,6 @@
     @include widhei (100vw, 200px);
     @include texts (60px, 400, rgb(104, 104, 104));
     overflow:hidden;
-
     &-content {
         @include display (flex);
         @include justali (center, center);
@@ -17,7 +16,7 @@
         -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* IE10+/Edge */
         user-select: none; /* Standard */
-
+        z-index: -1;
         &-text {
             @include display (in);
             @include texts (65px, 800, rgb(82, 138, 201));

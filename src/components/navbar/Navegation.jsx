@@ -1,24 +1,25 @@
 //* STYLE: _navegation.scss
 
 import { useState, useRef, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 const ProductList = ({isActive}) => {
     return (
         <ul className={`navigation-itemList-item-productList ${isActive ? 'active' : ''}`}>
             <li className="navigation-itemList-item-productList-item">
-                <a href="#">Tornillos</a>
+                <Link to="/category/autoperforante">Tornillos</Link>
             </li>
             <li className="navigation-itemList-item-productList-item">
-                <a href="#">Tarugos</a>
+                <Link to="/category/tarugos">Tarugos</Link>
             </li>
             <li className="navigation-itemList-item-productList-item">
-                <a href="#">Tuercas</a>
+                <Link to="/category/tuercas">Tuercas</Link>
             </li>
             <li className="navigation-itemList-item-productList-item">
-                <a href="#">Bulones</a>
+                <Link to="/category/bulones">Bulones</Link>
             </li>
             <li className="navigation-itemList-item-productList-item">
-                <a href="#">Arandelas</a>
+                <Link to="/category/arandelas">Arandelas</Link>
             </li>
         </ul>
     )
