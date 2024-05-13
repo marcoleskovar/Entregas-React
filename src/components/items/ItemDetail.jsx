@@ -1,10 +1,12 @@
 //* STYLE: _itemDetail.scss
 
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { ProductQuantity } from "../cart/ProductQuantity"
 import { useParams } from "react-router-dom"
+import { ProductsContext } from "../context/ProductsContext"
 
-export const ItemDetail = ({products}) => {
+export const ItemDetail = () => {
+    const products = useContext (ProductsContext)
     const {id} = useParams ()
     const [prod, setProd] = useState ([])
 
@@ -17,7 +19,6 @@ export const ItemDetail = ({products}) => {
             .catch (error => console.log(error))
     }, [])
     
-    console.log(prod.stock);
     return (
         <div className="itemDetailContainer">
             <section className="itemDetailContainer-mainSection">
@@ -62,7 +63,7 @@ export const ItemDetail = ({products}) => {
                             </select>
                         </div>
                         <div className="itemDetailContainer-mainSection-selection-details-confirm">
-                            <ProductQuantity stock={prod.stock} initial={1}/>
+                            <ProductQuantity stock={prod.stock} initial={1} prod={prod}/>
                         </div>
                     </div>
                 </section>

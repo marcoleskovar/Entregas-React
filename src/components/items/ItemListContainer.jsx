@@ -1,10 +1,12 @@
 //* STYLE: _itemListContainer.scss
 
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { ItemList } from "./ItemList"
 import { useParams } from "react-router-dom"
+import { ProductsContext } from "../context/ProductsContext"
 
-export const ItemListContainer = ({products}) => {
+export const ItemListContainer = () => {
+    const products = useContext (ProductsContext)
     const {id} = useParams()
     const [category, setCategory] = useState([])
 
@@ -12,7 +14,7 @@ export const ItemListContainer = ({products}) => {
         const categoryProducts = id ? products.filter (p => p.category === id) : products
         setCategory (categoryProducts)
     }, [id])
-
+    
     return (
         <div className="itemListContainer">
             <ItemList prod= {category}/>

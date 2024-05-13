@@ -1,12 +1,14 @@
 //* STYLE: _productQuantity.scss
 
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { AddToCartBtn } from "./AddToCartBtn"
+import { CartContext } from "../context/CartContex"
 
-export const ProductQuantity = ({stock, initial}) => {
+export const ProductQuantity = ({stock, initial, prod}) => {
     const [itemStock, setItemStock] = useState (0) //TODO No debe tener un stock hardcodeado, el componente debe recibir un producto como parametro y pasarle el product.stock a ProductQuantity
     const [value, setValue] = useState (1)
     const [insufficientStock, setinsufficientStock] = useState (false)
+    const {addItem} = useContext (CartContext)
 
     useEffect (() => {
         setItemStock (stock)
@@ -24,6 +26,7 @@ export const ProductQuantity = ({stock, initial}) => {
     const onAdd  = () => {
         setItemStock (itemStock - value)
         setValue (1)
+        addItem (prod, value)
     }
 
     return (
