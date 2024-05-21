@@ -1,0 +1,25 @@
+.cartContainer {
+    @include display (flex);
+    @include justali (center, start);
+    @include widhei (100vw, auto);
+    @include pad (10px 30px);
+}
+
+.empty {
+    @include justali (center, center);
+    @include hei (80vh);
+    @include flex (col);
+    &-text {
+        @include texts (40px, 500, rgb(59, 59, 59))
+    }
+    &-btn {
+        @include marpad (20px, 5px 10px);
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(82, 138, 201);
+        &-link {
+            @include texts (18px, 400, white);
+            text-decoration: none;
+        }
+    }
+}

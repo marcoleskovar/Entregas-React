@@ -1,0 +1,58 @@
+.cartListContainer {
+    @include display (flex);
+    @include justali (center, start);
+    @include flex (col);
+    @include mar (0 20px 0 0);
+    @include widhei (100%, auto);
+    border-radius: 15px 15px 15px 15px;
+    &-list {
+        @include widhei (100%, auto);
+        @include marpad (0, 0);
+        list-style: none;
+        border-radius: 15px 15px 15px 15px;
+        &-item {
+            @include widhei (100%, auto);
+            @include marpad (0 0 10px 0, 0);
+            background-color: rgb(230, 230, 230);
+            border-radius: 15px 15px 15px 15px;
+            &-link {
+                @include display (flex);
+                text-decoration: none;
+                cursor: pointer;
+                &-image {
+                    img {
+                        @include widhei (190px, 190px)
+                    }
+                }
+                &-info {
+                    @include display (flex);
+                    @include flex (col);
+                    @include justali (center, start);
+                    @include widhei (100%, auto);
+                    @include pad (0 0 0 15px);
+                    &-title {
+                        @include texts (20px, 400, rgb(54, 54, 54));
+                        @include mar (0 0 10px 0);
+                    }
+                    &-price {
+                        @include texts (25px, 500, rgb(54, 54, 54));
+                        @include mar (0 0 10px 0);
+
+                    }
+                    &-description {
+                        @include texts (12px, 400, rgb(54, 54, 54));
+                        @include mar (0 0 10px 0);
+                    }
+                }
+                &-delete {
+                    svg {
+                        @include mar (20px);
+                        @include widhei (30px, 30px);
+                        fill: rgb(173, 0, 0);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

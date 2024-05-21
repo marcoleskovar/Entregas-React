@@ -1,0 +1,39 @@
+.cartInfo {
+    @include display (flex);
+    @include flex (col);
+    @include justali (center, center);
+    @include widhei (30%,auto);
+    @include mar (20px 0);
+    border: 1px solid rgb(231, 112, 0);
+    border-radius: 10px;
+    &-detail {
+        @include display (flex);
+        @include flex (col);
+        text-align: start;
+        @include wid (100%);
+        @include pad (15px 10px);
+        &-totalQuantity {
+            @include texts (15px, 300, rgb(58, 58, 58));
+            @include mar (0 0 20px 0);
+        }
+        &-totalPrice {
+            @include texts (20px, 500, rgb(58, 58, 58))
+        }
+    }
+    &-buy {
+        @include mar (10px);
+        &-btn {
+            @include pad (5px);
+            @include display (flex);
+            @include justali (center, center);
+            @include texts (15px, 400, rgb(238, 238, 238));
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(82, 138, 201);
+        }
+        svg {
+            @include widhei (25px, 25px);
+            fill: rgb(238, 238, 238);
+        }
+    }
+}
