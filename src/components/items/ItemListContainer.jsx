@@ -13,7 +13,7 @@ export const ItemListContainer = () => {
     useEffect (() => {
         const categoryProducts = id ? products.filter (p => p.category === id) : products
         setCategory (categoryProducts)
-    }, [id])
+    }, [id, products])
     
     return (
         <div className="itemListContainer">

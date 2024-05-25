@@ -1,22 +1,10 @@
 //* STYLE: _item.scss
 
-import { useEffect } from "react"
-import { useState } from "react"
 import { Link } from "react-router-dom"
 
 export const Item = ({productInfo}) => {
-    //TODO: SACAR EL TIMEOUT, SOLO REALENTIZA LA CARGA. NO SIRVE DE NADA
-    const [visible, setVisible] = useState (false)
-
-    useEffect(() => {
-        const timeOut = setTimeout (() => {
-            setVisible (true)
-            return () => clearTimeout(timeOut)
-        }, 2000)
-    }, [])
-
     return (
-        <div className="itemCard" style={{display: visible ? 'block' : 'none'}}> {/* //TODO: SACARLE EL STYLE JUNTO CON EL TIMEOUT */}
+        <div className="itemCard">
             <Link to={`/item/${productInfo.id}`} className="itemCard-link">
                 <div className="itemCard-link-containers top">
                     <div className="itemCard-link-containers-imageContainer">

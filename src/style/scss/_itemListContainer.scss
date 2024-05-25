@@ -1,5 +1,6 @@
 .itemListContainer {
     @include display (flex);
+    @include flex (col);
     @include justali (center, center);
     @include widhei (100vw, auto);
     @include pad (10px 30px);
