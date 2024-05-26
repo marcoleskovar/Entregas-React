@@ -8,6 +8,7 @@ import { ItemListContainer } from './components/items/ItemListContainer'
 import { ItemDetail } from './components/items/ItemDetail'
 import { CartContainer } from './components/cart/CartContainer.jsx'
 import './style/css/main.css'
+import { OrdenesView } from './components/OrdenesView.jsx'
 
 function App () {
   return (
@@ -28,6 +29,7 @@ function App () {
                 <Route path='/category' element={<ItemListContainer/>}/>
                 <Route path='/item/:id' element={<ItemDetail/>}/>
                 <Route path='/cart' element={<CartContainer/>}/>
+                <Route path='/ordenes' element={<OrdenesView/>}/>
               </Routes>
             </BrowserRouter>
           </CartContextProvider>

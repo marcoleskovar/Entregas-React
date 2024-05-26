@@ -2,7 +2,9 @@
     @include widhei (100vw, 100vh);
     @include display (flex);
     @include justali (center, center);
+    @include position (absolute, 0, 0);
     background-color: rgb(247, 247, 247);
+    z-index: 100000000000000000000000;
     &-spinner {
         width: 48px;
         height: 48px;

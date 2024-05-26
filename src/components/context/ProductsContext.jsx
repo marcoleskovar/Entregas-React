@@ -1,17 +1,16 @@
 import { collection, getDocs, getFirestore } from "firebase/firestore"
-import { createContext, useContext, useEffect, useState } from "react"
-import { LoadingContext } from "./LoadingContext"
-import { LoadingSpinner } from "../LodingSpinner"
+import { createContext, useEffect, useState } from "react"
+import { useLoadingContext } from "./LoadingContext"
 
 export const ProductsContext = createContext ([])
 
 export const ProductsContextProvider = ({children}) => {
     const [prods, setProds] = useState ([])
-    const {loading, setLoading} = useContext (LoadingContext)
+    const {setLoadingState} = useLoadingContext()
 
     useEffect (() => {
         const fetchProducts = async () => {
-            setLoading (true)
+            setLoadingState (true)
             const db = getFirestore ()
             const prodCollection = collection (db, 'products')
     
@@ -19,14 +18,10 @@ export const ProductsContextProvider = ({children}) => {
             if (snapshot.size > 0) {
                 setProds (snapshot.docs.map (prod => ({id: prod.id, ...prod.data()})))
             }
-            setLoading (false)
+            setLoadingState (false)
         }
         fetchProducts ()
-    }, [setLoading])
-
-    if (loading) {
-        return <LoadingSpinner />
-    }
+    }, [])
 
     return (
         <ProductsContext.Provider value={prods}>

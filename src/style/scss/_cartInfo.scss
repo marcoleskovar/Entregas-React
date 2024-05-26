@@ -9,15 +9,39 @@
     &-detail {
         @include display (flex);
         @include flex (col);
-        text-align: start;
         @include wid (100%);
         @include pad (15px 10px);
+        text-align: start;
         &-totalQuantity {
             @include texts (15px, 300, rgb(58, 58, 58));
             @include mar (0 0 20px 0);
         }
         &-totalPrice {
             @include texts (20px, 500, rgb(58, 58, 58))
+        }
+    }
+    &-order {
+        @include display (flex);
+        @include flex (col);
+        @include wid (100%);
+        @include pad (15px 10px);
+        text-align: start;
+        &-inputContainer {
+            @include display (flex);
+            @include flex (col);
+            @include mar (5px 0);
+            &-label {
+                @include texts (14px, 400, rgb(54, 54, 54));
+            }
+            &-input {
+                border: 1px solid rgb(180, 180, 180);
+                border-radius: 5px;
+                &:focus-within{
+                    border: 2px solid rgb(82, 138, 201);
+                    outline: none;
+                }
+
+            }
         }
     }
     &-buy {

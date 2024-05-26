@@ -4,18 +4,24 @@ import { useContext, useEffect, useState } from "react"
 import { ProductQuantity } from "../cart/ProductQuantity"
 import { useParams } from "react-router-dom"
 import { ProductsContext } from "../context/ProductsContext"
+import { useLoadingContext } from "../context/LoadingContext"
 
 export const ItemDetail = () => {
     const products = useContext (ProductsContext)
     const {id} = useParams ()
     const [prod, setProd] = useState ([])
+    const {setLoadingState} = useLoadingContext()
 
     useEffect (() => {
+        setLoadingState (true)
         new Promise ((res, rej) => {
             const findProduct = id ? products.find (p => p.id === parseInt (id)) : false
             !findProduct ? rej (`Product ID not found: ${id}`) : res (findProduct)
         })
-            .then (result => setProd (result))
+            .then (result => {
+                setProd (result)
+                setLoadingState (false)
+            })
             .catch (error => console.log(error))
     }, [])
     

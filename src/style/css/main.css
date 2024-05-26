@@ -786,9 +786,9 @@ body {
 .cartInfo-detail {
   display: flex;
   flex-direction: column;
-  text-align: start;
   width: 100%;
   padding: 15px 10px;
+  text-align: start;
 }
 .cartInfo-detail-totalQuantity {
   font-size: 15px;
@@ -800,6 +800,31 @@ body {
   font-size: 20px;
   font-weight: 500;
   color: rgb(58, 58, 58);
+}
+.cartInfo-order {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px 10px;
+  text-align: start;
+}
+.cartInfo-order-inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+.cartInfo-order-inputContainer-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(54, 54, 54);
+}
+.cartInfo-order-inputContainer-input {
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 5px;
+}
+.cartInfo-order-inputContainer-input:focus-within {
+  border: 2px solid rgb(82, 138, 201);
+  outline: none;
 }
 .cartInfo-buy {
   margin: 10px;
@@ -828,7 +853,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: rgb(247, 247, 247);
+  z-index: 100000000000000000000000;
 }
 .loadingScreen-spinner {
   width: 48px;

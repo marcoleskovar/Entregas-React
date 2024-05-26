@@ -28,6 +28,9 @@ export const CartContainer = () => {
                         Ver Productos
                     </Link>
                 </button>
+                <Link to={'/ordenes'}>
+                    <p>Ver ordenes</p>
+                </Link>
             </div>
         )
     )
