@@ -1,0 +1,85 @@
+.orderContainer {
+    @include display (flex);
+    @include flex (col);
+    @include justali (center, center);
+    @include widhei (100%, auto);
+    @include pad (10px 30px);
+    &-detail {
+        @include wid (50%);
+        @include pad (25px);
+        border-radius: 10px;
+        background-color: rgb(218, 218, 218);
+        &-buyer {
+            @include mar (0 0 10px 0);
+            &-label {
+                @include texts (20px, 400, rgb(118, 148, 165));
+                @include mar (0);
+            }
+            &-list {
+                @include marpad (0, 0);
+                list-style: none;
+                &-item {
+                    @include texts (15px, 400, rgb(43, 43, 43));
+                    &-span {
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        &-date {
+            @include display (flex);
+            @include flex (col);
+            @include texts (17px, 400, rgb(118, 148, 165));
+            @include mar (0 0 10px 0);
+            &-span {
+                @include texts (13px, 300, rgb(43, 43, 43));
+            }
+        }
+        &-id {
+            @include display (flex);
+            @include flex (col);
+            @include texts (17px, 400, rgb(118, 148, 165));
+            @include mar (0 0 10px 0);
+            &-span {
+                @include texts (15px, 400, rgb(43, 43, 43));
+            }
+        }
+        &-products {
+            @include display (flex);
+            @include justali (start, center);
+            @include widhei (100%, auto);
+            @include pad (5px 0);
+            border-top: 1px solid rgb(167, 167, 167);
+            &-img {
+                @include hei (100%);
+                img {
+                    @include widhei (140px, 140px)
+                }
+            }
+            &-list {
+                @include hei (140px);
+                @include display (flex);
+                @include flex (col);
+                @include justali (space-evenly, start);
+                @include marpad (0, 0);
+                list-style: none;
+                &-item {
+                    @include display (flex);
+                    @include texts (13px, 400, rgb(43, 43, 43));
+                    @include mar (0 0 0 10px);
+                    span {
+                        @include texts (12px, 300, rgb(118, 148, 165));
+                        @include pad (0 0 0 5px)
+                    }
+                }
+            }
+        }
+        &-total {
+            @include texts (18px, 300, rgb(58, 58, 58));
+            text-align: center;
+            &-span {
+                @include texts (20px, 400, rgb(118, 148, 165));
+            }
+        }
+    }
+}

@@ -1,27 +1,27 @@
-.cartListContainer {
+.ordersContainer {
     @include display (flex);
     @include justali (center, start);
     @include flex (col);
-    @include mar (0 20px 0 0);
+    @include marpad (0 20px 0 0, 30px);
     @include widhei (100%, auto);
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 10px 10px 10px 10px;
     &-list {
         @include widhei (100%, auto);
         @include marpad (0, 0);
         list-style: none;
-        border-radius: 15px 15px 15px 15px;
+        border-radius: 10px 10px 10px 10px;
         &-item {
-            @include widhei (100%, auto);
+            @include widhei (70%, auto);
             @include marpad (0 0 10px 0, 0);
             background-color: rgb(230, 230, 230);
-            border-radius: 15px 15px 15px 15px;
+            border-radius: 10px 10px 10px 10px;
             &-link {
                 @include display (flex);
                 text-decoration: none;
                 cursor: pointer;
-                &-image {
+                &-img {
                     img {
-                        @include widhei (190px, 190px)
+                        @include widhei (140px, 140px)
                     }
                 }
                 &-info {
@@ -31,27 +31,28 @@
                     @include widhei (100%, auto);
                     @include pad (0 0 0 15px);
                     &-title {
-                        @include texts (20px, 400, rgb(54, 54, 54));
+                        @include texts (18px, 400, rgb(83, 118, 139));
                         @include mar (0 0 10px 0);
                     }
-                    &-price {
-                        @include texts (25px, 500, rgb(54, 54, 54));
+                    &-total {
+                        @include texts (23px, 500, rgb(54, 54, 54));
                         @include mar (0 0 10px 0);
                     }
-                    &-description {
-                        @include texts (12px, 400, rgb(54, 54, 54));
+                    &-date {
+                        @include texts (12px, 400, rgb(105, 105, 105));
                         @include mar (0 0 10px 0);
-                    }
-                }
-                &-delete {
-                    svg {
-                        @include mar (20px);
-                        @include widhei (30px, 30px);
-                        fill: rgb(173, 0, 0);
-                        cursor: pointer;
                     }
                 }
             }
         }
+    }
+}
+
+.empty {
+    @include justali (center, center);
+    @include hei (80vh);
+    @include flex (col);
+    &-text {
+        @include texts (35px, 500, rgb(59, 59, 59));
     }
 }

@@ -4,6 +4,7 @@ import { CartWidget } from "./CartWidget"
 import { SearchBar } from "./SearchBar"
 import { Navegation } from "./Navegation"
 import { Link } from "react-router-dom"
+import { BuysWidget } from "./BuysWidget"
 
 export const Navbar = () => {
     return (
@@ -17,6 +18,7 @@ export const Navbar = () => {
                 <Navegation />
                 <div className="navbar-mainContainer-searchAndCart">
                     <SearchBar />
+                    <BuysWidget />
                     <CartWidget />
                 </div>
             </div>

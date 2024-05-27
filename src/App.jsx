@@ -7,8 +7,9 @@ import { DynamicText } from './components/landing/DynamicText'
 import { ItemListContainer } from './components/items/ItemListContainer'
 import { ItemDetail } from './components/items/ItemDetail'
 import { CartContainer } from './components/cart/CartContainer.jsx'
-import './style/css/main.css'
 import { OrdenesView } from './components/OrdenesView.jsx'
+import { OrderView } from './components/OrderView.jsx'
+import './style/css/main.css'
 
 function App () {
   return (
@@ -30,6 +31,7 @@ function App () {
                 <Route path='/item/:id' element={<ItemDetail/>}/>
                 <Route path='/cart' element={<CartContainer/>}/>
                 <Route path='/ordenes' element={<OrdenesView/>}/>
+                <Route path='/ordenes/:id' element={<OrderView/>}/>
               </Routes>
             </BrowserRouter>
           </CartContextProvider>

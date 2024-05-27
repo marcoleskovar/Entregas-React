@@ -29,7 +29,7 @@ export const CartContainer = () => {
                     </Link>
                 </button>
                 <Link to={'/ordenes'}>
-                    <p>Ver ordenes</p>
+                    <p>Ver compras</p>
                 </Link>
             </div>
         )

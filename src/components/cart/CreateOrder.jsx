@@ -3,6 +3,7 @@
 import { useContext, useState } from "react"
 import { CartContext } from "../context/CartContex"
 import { addDoc, collection, getFirestore } from "firebase/firestore"
+import moment from "moment"
 
 export const CreateOrder = ({totalPrice}) => {
     const {cartList, clear} = useContext (CartContext)
@@ -35,7 +36,8 @@ export const CreateOrder = ({totalPrice}) => {
             
         const buyer = {name: name, phone: phone, email: email}
         const items = cartList.map (p => ({id: p.id, title: p.title, quantity: p.quantity, price: p.price, img: p.mainImg}))
-        const order = {buyer: buyer, items: items, date: new Date () ,total: totalPrice}
+        const date = moment (new Date ()).format ('DD/MM/YYYY - HH:mm')
+        const order = {buyer: buyer, items: items, date: date ,total: totalPrice}
 
         const db = getFirestore ()
         const orderCollection = collection (db, 'orders')

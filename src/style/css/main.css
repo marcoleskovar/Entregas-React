@@ -108,6 +108,25 @@ body {
   color: rgb(252, 252, 252);
 }
 
+.buysWidgetContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 0 20px;
+}
+.buysWidgetContainer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(100, 100, 100);
+  text-decoration: none;
+}
+.buysWidgetContainer-link-svg {
+  width: 24px;
+  height: 24px;
+  fill: rgb(77, 77, 77);
+}
+
 .searchBarContainer {
   display: flex;
   flex-direction: row;
@@ -896,4 +915,194 @@ body {
   100% {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
   }
+}
+
+.ordersContainer {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin: 0 20px 0 0;
+  padding: 30px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 10px 10px;
+}
+.ordersContainer-list {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 10px 10px 10px 10px;
+}
+.ordersContainer-list-item {
+  width: 70%;
+  height: auto;
+  margin: 0 0 10px 0;
+  padding: 0;
+  background-color: rgb(230, 230, 230);
+  border-radius: 10px 10px 10px 10px;
+}
+.ordersContainer-list-item-link {
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+}
+.ordersContainer-list-item-link-img img {
+  width: 140px;
+  height: 140px;
+}
+.ordersContainer-list-item-link-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  height: auto;
+  padding: 0 0 0 15px;
+}
+.ordersContainer-list-item-link-info-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(83, 118, 139);
+  margin: 0 0 10px 0;
+}
+.ordersContainer-list-item-link-info-total {
+  font-size: 23px;
+  font-weight: 500;
+  color: rgb(54, 54, 54);
+  margin: 0 0 10px 0;
+}
+.ordersContainer-list-item-link-info-date {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(105, 105, 105);
+  margin: 0 0 10px 0;
+}
+
+.empty {
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
+}
+.empty-text {
+  font-size: 35px;
+  font-weight: 500;
+  color: rgb(59, 59, 59);
+}
+
+.orderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 10px 30px;
+}
+.orderContainer-detail {
+  width: 50%;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: rgb(218, 218, 218);
+}
+.orderContainer-detail-buyer {
+  margin: 0 0 10px 0;
+}
+.orderContainer-detail-buyer-label {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(118, 148, 165);
+  margin: 0;
+}
+.orderContainer-detail-buyer-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.orderContainer-detail-buyer-list-item {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(43, 43, 43);
+}
+.orderContainer-detail-buyer-list-item-span {
+  font-weight: 300;
+}
+.orderContainer-detail-date {
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  font-weight: 400;
+  color: rgb(118, 148, 165);
+  margin: 0 0 10px 0;
+}
+.orderContainer-detail-date-span {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgb(43, 43, 43);
+}
+.orderContainer-detail-id {
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  font-weight: 400;
+  color: rgb(118, 148, 165);
+  margin: 0 0 10px 0;
+}
+.orderContainer-detail-id-span {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(43, 43, 43);
+}
+.orderContainer-detail-products {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 5px 0;
+  border-top: 1px solid rgb(167, 167, 167);
+}
+.orderContainer-detail-products-img {
+  height: 100%;
+}
+.orderContainer-detail-products-img img {
+  width: 140px;
+  height: 140px;
+}
+.orderContainer-detail-products-list {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.orderContainer-detail-products-list-item {
+  display: flex;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(43, 43, 43);
+  margin: 0 0 0 10px;
+}
+.orderContainer-detail-products-list-item span {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgb(118, 148, 165);
+  padding: 0 0 0 5px;
+}
+.orderContainer-detail-total {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgb(58, 58, 58);
+  text-align: center;
+}
+.orderContainer-detail-total-span {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(118, 148, 165);
 }
