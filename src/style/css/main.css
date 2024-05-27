@@ -917,6 +917,15 @@ body {
   }
 }
 
+.spinnerInCart {
+  margin: 0 0 0 13px;
+  width: 20px;
+  height: 20px;
+}
+.spinnerInCart::before {
+  border: 2px solid rgb(245, 245, 245);
+}
+
 .ordersContainer {
   display: flex;
   justify-content: center;

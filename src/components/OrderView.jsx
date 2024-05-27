@@ -85,7 +85,7 @@ export const OrderView = () => {
                                             </span>
                                         </li>
                                         <li className="orderContainer-detail-products-list-item">
-                                            Cantidad X precio:
+                                            Subtotal:
                                             <span>
                                                 ${p.price * p.quantity}
                                             </span>
